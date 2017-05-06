@@ -1,9 +1,7 @@
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
-c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.NoUTIDLogin.resources
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\client_secret.json
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
@@ -30,4 +28,12 @@ c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFo
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Zlib.Portable.xml
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.Mvc4.dll
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Drive.v2.dll
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.Mvc4.pdb
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.Mvc4.xml
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Drive.v2.pdb
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Drive.v2.xml
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UTIDLogin.resources
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UserNotFound.resources
+c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Startup.resources

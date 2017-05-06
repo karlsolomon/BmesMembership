@@ -16,14 +16,18 @@ using Google.Apis.Drive.v2;
 
 namespace WindowsFormsApplication1
 {
-    public partial class NoUTIDLogin : Form
+    public partial class UTIDLogin : Form
     {
-        public NoUTIDLogin()
+        String eventName;
+        String date;
+        public UTIDLogin(String eventName, String date)
         {
             InitializeComponent();
+            this.eventName = eventName;
+            this.date = date;
         }
 
-        private async void utID_Send(object sender, EventArgs e)
+        private void utID_Send(object sender, EventArgs e)
         {
             if(this.utIDTextBox.Text.Contains("?"))     // ? is the last character
             {
@@ -38,7 +42,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     //TODO: OPEN NEW FORM & GET EID, FIRST, LAST
-                    Form2 noID = new Form2(utIDNumber);
+                    UserNotFound noID = new UserNotFound(utIDNumber);
                     noID.Show();
                 }
                 this.utIDTextBox.Clear();
@@ -47,7 +51,7 @@ namespace WindowsFormsApplication1
 
         private void noID_Click(object sender, EventArgs e)
         {
-            Form2 noID = new Form2();
+            UserNotFound noID = new UserNotFound();
             noID.Show();
         }
 

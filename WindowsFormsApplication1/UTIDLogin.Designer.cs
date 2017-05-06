@@ -2,7 +2,7 @@
 
 namespace WindowsFormsApplication1
 {
-    partial class NoUTIDLogin
+    partial class UTIDLogin
     {
         /// <summary>
         /// Required designer variable.

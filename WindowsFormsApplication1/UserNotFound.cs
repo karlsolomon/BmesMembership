@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form2 : Form
+    public partial class UserNotFound : Form
     {
         String utID;
         Boolean startup = true;
 
-        public Form2(String utID)
+        public UserNotFound(String utID)
         {
             InitializeComponent();
             this.utID = utID;
         }
 
-        public Form2()
+        public UserNotFound()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
                 this.Close();
             } else
             {
-                MessageBox.Show("Invalid Entry", "Must put values for: EID, First & Last", MessageBoxButtons.OKCancel);
+                MessageBox.Show("Must put values for: EID, First & Last", "Invalid Entry", MessageBoxButtons.OKCancel);
             }
         }
     }
