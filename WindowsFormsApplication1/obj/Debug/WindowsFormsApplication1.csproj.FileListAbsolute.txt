@@ -37,3 +37,40 @@ c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFo
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UTIDLogin.resources
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UserNotFound.resources
 c:\users\ksolomon\documents\visual studio 2015\Projects\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Startup.resources
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.Mvc4.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Drive.v2.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Sheets.v4.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Zlib.Portable.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.Mvc4.pdb
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.Mvc4.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Drive.v2.pdb
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Drive.v2.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Google.Apis.Sheets.v4.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\Zlib.Portable.xml
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UTIDLogin.resources
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UserNotFound.resources
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Startup.resources
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\client_secret_new.json
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Net.Http.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
