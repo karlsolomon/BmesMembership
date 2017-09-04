@@ -20,6 +20,8 @@ namespace WindowsFormsApplication1
     {
         String eventName;
         String date;
+        String eid;
+        String uniqueID;
         public UTIDLogin(String eventName, String date)
         {
             InitializeComponent();
@@ -29,20 +31,37 @@ namespace WindowsFormsApplication1
 
         private void utID_Send(object sender, EventArgs e)
         {
-            if(this.utIDTextBox.Text.Contains("?"))     // ? is the last character
+            if(this.utIDTextBox.Text.Contains("11111200000000000000?"))     // ? is the last character
             {
-                String utIDNumber = this.utIDTextBox.Text.Substring(1);
-                utIDNumber = utIDNumber.Substring(0,this.utIDTextBox.Text.IndexOf("=") - 1);
-                Console.Write(utIDNumber);
-                if(userExists(utIDNumber))
+                uniqueID = this.utIDTextBox.Text;
+                
+                int startIndexUniqueID = uniqueID.IndexOf(';') + 1;
+                int endIndexUniqueID = uniqueID.IndexOf('=');
+                uniqueID = uniqueID.Substring(startIndexUniqueID, endIndexUniqueID - startIndexUniqueID);
+                Console.WriteLine(uniqueID);
+
+                if(userExists(uniqueID))
                 {
                     //TODO: Write to Google Docs Sheet
-                    markMemberAttended(utIDNumber);
+                    markMemberAttended(uniqueID);
                 }
                 else
                 {
                     //TODO: OPEN NEW FORM & GET EID, FIRST, LAST
-                    UserNotFound noID = new UserNotFound(utIDNumber);
+                    UserNotFound noID;
+                    String entry = this.utIDTextBox.Text;
+                    if (entry.Contains("%A"))
+                    {
+                        int startIndexEID = "%A".Length;
+                        int endIndexEID = entry.IndexOf(' ');
+                        this.eid = entry.Substring(startIndexEID, endIndexEID - startIndexEID);  // got EID
+                        Console.WriteLine(eid);
+                        noID = new UserNotFound(uniqueID, eid.ToUpper());
+                    }
+                    else
+                    {
+                        noID = new UserNotFound(uniqueID);
+                    }
                     noID.Show();
                 }
                 this.utIDTextBox.Clear();

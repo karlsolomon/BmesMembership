@@ -35,6 +35,10 @@
             this.eid = new System.Windows.Forms.TextBox();
             this.first = new System.Windows.Forms.TextBox();
             this.last = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +77,7 @@
             // submit
             // 
             this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit.Location = new System.Drawing.Point(114, 181);
+            this.submit.Location = new System.Drawing.Point(240, 278);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(71, 33);
             this.submit.TabIndex = 3;
@@ -87,7 +91,7 @@
             this.eid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eid.Location = new System.Drawing.Point(69, 30);
             this.eid.Name = "eid";
-            this.eid.Size = new System.Drawing.Size(203, 26);
+            this.eid.Size = new System.Drawing.Size(436, 26);
             this.eid.TabIndex = 4;
             this.eid.UseWaitCursor = true;
             // 
@@ -96,7 +100,7 @@
             this.first.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.first.Location = new System.Drawing.Point(69, 86);
             this.first.Name = "first";
-            this.first.Size = new System.Drawing.Size(203, 26);
+            this.first.Size = new System.Drawing.Size(436, 26);
             this.first.TabIndex = 5;
             this.first.UseWaitCursor = true;
             // 
@@ -105,15 +109,60 @@
             this.last.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.last.Location = new System.Drawing.Point(69, 138);
             this.last.Name = "last";
-            this.last.Size = new System.Drawing.Size(203, 26);
+            this.last.Size = new System.Drawing.Size(436, 26);
             this.last.TabIndex = 6;
             this.last.UseWaitCursor = true;
             // 
-            // Form2
+            // textBox1
             // 
+            this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone.Location = new System.Drawing.Point(69, 235);
+            this.phone.Name = "textBox1";
+            this.phone.Size = new System.Drawing.Size(436, 26);
+            this.phone.TabIndex = 10;
+            this.phone.UseWaitCursor = true;
+            // 
+            // textBox2
+            // 
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email.Location = new System.Drawing.Point(69, 183);
+            this.email.Name = "textBox2";
+            this.email.Size = new System.Drawing.Size(436, 26);
+            this.email.TabIndex = 9;
+            this.email.UseWaitCursor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Phone";
+            this.label4.UseWaitCursor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Email";
+            this.label5.UseWaitCursor = true;
+            // 
+            // UserNotFound
+            // 
+            this.AcceptButton = this.submit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 226);
+            this.ClientSize = new System.Drawing.Size(535, 326);
+            this.Controls.Add(this.phone);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.last);
             this.Controls.Add(this.first);
             this.Controls.Add(this.eid);
@@ -121,7 +170,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "UserNotFound";
             this.Text = "No UT ID Login";
             this.UseWaitCursor = true;
             this.ResumeLayout(false);
@@ -137,5 +186,9 @@
         private System.Windows.Forms.TextBox eid;
         private System.Windows.Forms.TextBox first;
         private System.Windows.Forms.TextBox last;
+        private System.Windows.Forms.TextBox phone;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

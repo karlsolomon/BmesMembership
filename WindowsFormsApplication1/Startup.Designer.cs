@@ -61,6 +61,7 @@
             this.signInButton.Text = "Go to Sign-In";
             this.signInButton.UseVisualStyleBackColor = true;
             this.signInButton.Click += new System.EventHandler(this.goToSignIn);
+            this.AcceptButton = this.signInButton;          // enter "clicks" this button
             // 
             // Form3
             // 

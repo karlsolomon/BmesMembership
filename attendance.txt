@@ -1,0 +1,3 @@
+uniqueID, eid, first, last, email, phone #,meeting1 08/31/17, meeting2 09/04/17
+6008619003700073, kws653, karl, solomon, ksolomon@utexas.edu, 2818579834,0,1
+6008619006226928, JRR4382, Jacob, Rodenbusch, jrodenbusch@utexas.edu, 5555555555,1,1
