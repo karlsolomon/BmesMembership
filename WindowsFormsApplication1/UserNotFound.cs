@@ -41,44 +41,39 @@ namespace WindowsFormsApplication1
                 startup = false;
                 return;
             }
-
-            String first = this.first.Text;
-            String last = this.last.Text;
-            String eid = this.eid.Text;
-            String email = this.email.Text;
-            String phone = this.phone.Text;
-            if(validEntry(first, last, eid, email, phone))
+            if(validEntry())
             {
                 //TODO: POPULATE TABLE
-                Console.Write(first + " " + last + " " + eid);
+                Console.Write(first.Text + " " + last.Text + " " + eid.Text + " " + email.Text + " " + phone.Text);
+                attendanceWriter.addNewMember(utID, eid.Text, first.Text, last.Text, email.Text, phone.Text);
                 this.Close();
             }
         }
 
-        private bool validEntry(String first, String last, String eid, String email, String phone)
-        {
+        private bool validEntry()
+        {            
             var emailFormat = new Regex(@"[a-zA-Z_0-9@.]*");
             var phoneToNumber = new Regex(@"[^\d]+");
             var phoneFormat = new Regex(@"[0-9]");
             var alphanumeric = new Regex(@"[a-zA-Z0-9]*");
             bool valid = true;
-            phone = phoneToNumber.Replace(phone, ""); 
-            if(!emailFormat.IsMatch(email) || !email.Contains("@"))
+            phone.Text = phoneToNumber.Replace(phone.Text, ""); 
+            if(!emailFormat.IsMatch(email.Text) || !email.Text.Contains("@"))
             {
                 MessageBox.Show("Must enter valid email", "Invalid Entry", MessageBoxButtons.OKCancel);
-                this.email.Text = "";
+                email.Text = "";
                 valid = false;
             }
-            else if(!phoneFormat.IsMatch(phone))
+            else if(!phoneFormat.IsMatch(phone.Text))
             {
                 MessageBox.Show("Must enter valid phone number. Enter as numeric only", "Invalid Entry", MessageBoxButtons.OKCancel);
-                this.phone.Text = "";
+                phone.Text = "";
                 valid = false;
             }
-            else if(!alphanumeric.IsMatch(eid))
+            else if(!alphanumeric.IsMatch(eid.Text))
             {
                 MessageBox.Show("EID must be alphanumeric.", "Invalid Entry", MessageBoxButtons.OKCancel);
-                this.eid.Text = "";
+                eid.Text = "";
                 valid = false;
             }
             return valid;

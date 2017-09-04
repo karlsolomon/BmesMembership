@@ -28,7 +28,6 @@ namespace WindowsFormsApplication1
             this.eventName = eventName;
             this.date = date;
         }
-
         private void utID_Send(object sender, EventArgs e)
         {
             if(this.utIDTextBox.Text.Contains("11111200000000000000?"))     // ? is the last character
@@ -42,13 +41,10 @@ namespace WindowsFormsApplication1
 
                 if(userExists(uniqueID))
                 {
-                    //TODO: Write to Google Docs Sheet
-                    markMemberAttended(uniqueID);
+                    attendanceWriter.markAttendedUnique(uniqueID);
                 }
                 else
                 {
-                    //TODO: OPEN NEW FORM & GET EID, FIRST, LAST
-                    UserNotFound noID;
                     String entry = this.utIDTextBox.Text;
                     if (entry.Contains("%A"))
                     {
@@ -56,13 +52,21 @@ namespace WindowsFormsApplication1
                         int endIndexEID = entry.IndexOf(' ');
                         this.eid = entry.Substring(startIndexEID, endIndexEID - startIndexEID);  // got EID
                         Console.WriteLine(eid);
-                        noID = new UserNotFound(uniqueID, eid.ToUpper());
+                        if(!attendanceWriter.getRowOfUserEID(eid).Equals(-1))
+                        {
+                            attendanceWriter.markAttendedEID(eid);
+                        }
+                        else
+                        {
+                            UserNotFound newMember = new UserNotFound(uniqueID, eid);
+                            newMember.Show();
+                        }
                     }
                     else
                     {
-                        noID = new UserNotFound(uniqueID);
+                        EID newMember = new EID(uniqueID);
+                        newMember.Show();
                     }
-                    noID.Show();
                 }
                 this.utIDTextBox.Clear();
             }
@@ -70,33 +74,12 @@ namespace WindowsFormsApplication1
 
         private void noID_Click(object sender, EventArgs e)
         {
-            UserNotFound noID = new UserNotFound();
-            noID.Show();
         }
 
         private bool userExists(String utIDNumber)
         {
             //Query Google Doc, if the user exists then true, else false
             return false;
-        }
-
-
-        private async void markMemberAttended(String utIDNumber)
-        {
-            var credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read), new[] { DriveService.Scope.Drive }, "VPRelations", CancellationToken.None);
-            var initializer = new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = "membership",
-            };
-
-            var service = new DriveService(initializer);
-            var list = await service.Files.List().ExecuteAsync();
-            foreach (var file in list.Items)
-            {
-                // You can get data from the file (using file.Title for example)
-                // and append it to a TextBox, List, etc.
-            }
         }
     }
 }

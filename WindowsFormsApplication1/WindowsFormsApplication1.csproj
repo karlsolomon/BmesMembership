@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Google.Apis, Version=1.25.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.25.0\lib\net45\Google.Apis.dll</HintPath>
       <Private>True</Private>
@@ -86,6 +90,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="attendanceWriter.cs" />
+    <Compile Include="EID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EID.Designer.cs">
+      <DependentUpon>EID.cs</DependentUpon>
+    </Compile>
     <Compile Include="UTIDLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +117,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EID.resx">
+      <DependentUpon>EID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UTIDLogin.resx">
       <DependentUpon>UTIDLogin.cs</DependentUpon>
     </EmbeddedResource>

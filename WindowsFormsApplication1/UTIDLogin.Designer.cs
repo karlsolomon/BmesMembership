@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 9);
+            this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 20);
             this.label1.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1
             // noID
             // 
             this.noID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noID.Location = new System.Drawing.Point(69, 88);
+            this.noID.Location = new System.Drawing.Point(36, 88);
             this.noID.Name = "noID";
             this.noID.Size = new System.Drawing.Size(203, 38);
             this.noID.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
             this.noID.UseVisualStyleBackColor = true;
             this.noID.Click += new System.EventHandler(this.noID_Click);
             // 
-            // NoUTIDLogin
+            // UTIDLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.utIDTextBox);
-            this.Name = "NoUTIDLogin";
+            this.Name = "UTIDLogin";
             this.Text = "UT ID Login";
             this.ResumeLayout(false);
             this.PerformLayout();
