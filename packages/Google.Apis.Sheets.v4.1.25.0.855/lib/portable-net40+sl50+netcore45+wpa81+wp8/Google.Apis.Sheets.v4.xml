@@ -32,12 +32,6 @@
         <member name="P:Google.Apis.Sheets.v4.SheetsService.BasePath">
             <summary>Gets the service base path.</summary>
         </member>
-        <member name="P:Google.Apis.Sheets.v4.SheetsService.BatchUri">
-            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
-        </member>
-        <member name="P:Google.Apis.Sheets.v4.SheetsService.BatchPath">
-            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
-        </member>
         <member name="T:Google.Apis.Sheets.v4.SheetsService.Scope">
             <summary>Available OAuth 2.0 scopes for use with the Google Sheets API.</summary>
         </member>
@@ -243,10 +237,6 @@
             <summary>The A1 notation of a range to search for a logical table of data. Values will be appended
             after the last row of the table.</summary>
         </member>
-        <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.AppendRequest.IncludeValuesInResponse">
-            <summary>Determines if the update response should include the values of the cells that were
-            appended. By default, responses do not include the updated values.</summary>
-        </member>
         <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.AppendRequest.ResponseValueRenderOption">
             <summary>Determines how values in the response should be rendered. The default render option is
             ValueRenderOption.FORMATTED_VALUE.</summary>
@@ -276,6 +266,10 @@
             <summary>Determines how dates, times, and durations in the response should be rendered. This is
             ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
             [DateTimeRenderOption.SERIAL_NUMBER].</summary>
+        </member>
+        <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.AppendRequest.IncludeValuesInResponse">
+            <summary>Determines if the update response should include the values of the cells that were
+            appended. By default, responses do not include the updated values.</summary>
         </member>
         <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.AppendRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
@@ -553,12 +547,6 @@
         <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.UpdateRequest.Range">
             <summary>The A1 notation of the values to update.</summary>
         </member>
-        <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.UpdateRequest.IncludeValuesInResponse">
-            <summary>Determines if the update response should include the values of the cells that were updated.
-            By default, responses do not include the updated values. If the range to write was larger than than
-            the range actually written, the response will include all values in the requested range (excluding
-            trailing empty rows and columns).</summary>
-        </member>
         <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.UpdateRequest.ResponseValueRenderOption">
             <summary>Determines how values in the response should be rendered. The default render option is
             ValueRenderOption.FORMATTED_VALUE.</summary>
@@ -582,6 +570,12 @@
             <summary>Determines how dates, times, and durations in the response should be rendered. This is
             ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
             [DateTimeRenderOption.SERIAL_NUMBER].</summary>
+        </member>
+        <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.UpdateRequest.IncludeValuesInResponse">
+            <summary>Determines if the update response should include the values of the cells that were updated.
+            By default, responses do not include the updated values. If the range to write was larger than than
+            the range actually written, the response will include all values in the requested range (excluding
+            trailing empty rows and columns).</summary>
         </member>
         <member name="P:Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource.UpdateRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
@@ -1306,7 +1300,7 @@
         </member>
         <member name="P:Google.Apis.Sheets.v4.Data.CellData.Hyperlink">
             <summary>A hyperlink this cell points to, if any. This field is read-only.  (To set it, use a `=HYPERLINK`
-            formula.)</summary>
+            formula in the userEnteredValue.formulaValue field.)</summary>
         </member>
         <member name="P:Google.Apis.Sheets.v4.Data.CellData.Note">
             <summary>Any note on the cell.</summary>
