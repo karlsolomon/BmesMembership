@@ -74,3 +74,4 @@ C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debu
 C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.Encoding.dll
 C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.Primitives.dll
 C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\jrrod\Documents\GitHub\BmesMembership\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.EID.resources

@@ -20,6 +20,8 @@ namespace WindowsFormsApplication1
     {
         String eventName;
         String date;
+        String eid;
+        String uniqueID;
         public UTIDLogin(String eventName, String date)
         {
             InitializeComponent();
@@ -29,21 +31,44 @@ namespace WindowsFormsApplication1
 
         private void utID_Send(object sender, EventArgs e)
         {
-            if(this.utIDTextBox.Text.Contains("?"))     // ? is the last character
+            if(this.utIDTextBox.Text.Contains("11111200000000000000?"))     // ? is the last character
             {
-                String utIDNumber = this.utIDTextBox.Text.Substring(1);
-                utIDNumber = utIDNumber.Substring(0,this.utIDTextBox.Text.IndexOf("=") - 1);
-                Console.Write(utIDNumber);
-                if(userExists(utIDNumber))
+                uniqueID = this.utIDTextBox.Text;
+
+                int startIndexUniqueID = uniqueID.IndexOf(';') + 1;
+                int endIndexUniqueID = uniqueID.IndexOf('=');
+                uniqueID = uniqueID.Substring(startIndexUniqueID, endIndexUniqueID - startIndexUniqueID);
+                Console.WriteLine(uniqueID);
+
+                if (userExists(uniqueID))
                 {
-                    //TODO: Write to Google Docs Sheet
-                    markMemberAttended(utIDNumber);
+                    attendanceWriter.markAttendedUnique(uniqueID);
                 }
                 else
                 {
-                    //TODO: OPEN NEW FORM & GET EID, FIRST, LAST
-                    UserNotFound noID = new UserNotFound(utIDNumber);
-                    noID.Show();
+                    String entry = this.utIDTextBox.Text;
+                    if (entry.Contains("%A"))
+                    {
+                        int startIndexEID = "%A".Length;
+                        int endIndexEID = entry.IndexOf(' ');
+                        this.eid = entry.Substring(startIndexEID, endIndexEID - startIndexEID);  // got EID
+                        Console.WriteLine(eid);
+                        if (!attendanceWriter.getRowOfUserEID(eid).Equals(-1))
+                        {
+                            UserNotFound newMember = new UserNotFound(uniqueID, eid);
+                            newMember.Show();
+                            
+                        }
+                        else
+                        {
+                            attendanceWriter.markAttendedEID(eid);
+                        }
+                    }
+                    else
+                    {
+                        EID newMember = new EID(uniqueID);
+                        newMember.Show();
+                    }
                 }
                 this.utIDTextBox.Clear();
             }
@@ -57,11 +82,17 @@ namespace WindowsFormsApplication1
 
         private bool userExists(String utIDNumber)
         {
-            //Query Google Doc, if the user exists then true, else false
-            return false;
+            if (attendanceWriter.getRowOfUserUnique(utIDNumber).Equals(-1))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
-
+        /*
         private async void markMemberAttended(String utIDNumber)
         {
             var credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read), new[] { DriveService.Scope.Drive }, "VPRelations", CancellationToken.None);
@@ -79,5 +110,6 @@ namespace WindowsFormsApplication1
                 // and append it to a TextBox, List, etc.
             }
         }
+        */
     }
 }
