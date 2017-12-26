@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             this.utID = utID;
         }
-
+        
         public UserNotFound(String utID, String eid)
         {
             InitializeComponent();

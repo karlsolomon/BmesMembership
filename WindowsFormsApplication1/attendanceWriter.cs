@@ -173,14 +173,18 @@ namespace WindowsFormsApplication1
             IList<IList<object>> values = response.Values;
             var rows = values.Count;
             var indexNoHeader = -1;
-
+ 
             for (int i = 0; i < values.Count; i++) {
-                string sheetEID = values[i][0].ToString();
+                foreach (var item in values[i])
+                {
 
-                if (sheetEID == eid) {
-                    indexNoHeader = i;
-                    break;
+                    if (item.ToString() == eid)
+                    {
+                        indexNoHeader = i;
+                        break;
+                    }
                 }
+                    
             }
             var sheetRowNum = indexNoHeader + 2;
             if (indexNoHeader == -1) {
@@ -202,15 +206,17 @@ namespace WindowsFormsApplication1
             var rows = values.Count;
             var indexNoHeader = -1;
 
-            for (int i = 0; i < values.Count; i++)
+            for(var i = 0; i < values.Count; i++)
             {
-                string sheetUnique = values[i][0].ToString();
-
-                if (sheetUnique == unique)
+                foreach (var item in values[i])
                 {
-                    indexNoHeader = i;
-                    break;
+                    if (item.ToString() == unique)
+                    {
+                        indexNoHeader = i;
+                        break;
+                    }
                 }
+                
             }
             var sheetRowNum = indexNoHeader + 2;
             if (indexNoHeader == -1)
@@ -221,6 +227,27 @@ namespace WindowsFormsApplication1
             {
                 return sheetRowNum;
             }
+        }
+
+        public static void addUnique(String unique, String eid)
+        {
+            var service = getService();
+
+            var row = getRowOfUserEID(eid).ToString();
+            string range = "A" + row;
+            //Console.WriteLine(range);
+
+            
+
+            ValueRange valueRange = new ValueRange();
+            valueRange.MajorDimension = "ROWS";
+
+            var ammendUnique = new List<object>() { unique };
+            valueRange.Values = new List<IList<object>> { ammendUnique };
+
+            SpreadsheetsResource.ValuesResource.UpdateRequest update = service.Spreadsheets.Values.Update(valueRange, spreadsheetID, range);
+            update.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.RAW;
+            UpdateValuesResponse updateRespones = update.Execute();
         }
     }
 }

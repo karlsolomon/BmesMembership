@@ -13,6 +13,7 @@ using System.Threading;
 using Google.Apis.Services;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v2;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApplication1
 {
@@ -40,6 +41,8 @@ namespace WindowsFormsApplication1
                 uniqueID = uniqueID.Substring(startIndexUniqueID, endIndexUniqueID - startIndexUniqueID);
                 Console.WriteLine(uniqueID);
 
+                Console.WriteLine(userExists(uniqueID));
+
                 if (userExists(uniqueID))
                 {
                     attendanceWriter.markAttendedUnique(uniqueID);
@@ -47,13 +50,15 @@ namespace WindowsFormsApplication1
                 else
                 {
                     String entry = this.utIDTextBox.Text;
+                    
                     if (entry.Contains("%A"))
                     {
                         int startIndexEID = "%A".Length;
                         int endIndexEID = entry.IndexOf(' ');
                         this.eid = entry.Substring(startIndexEID, endIndexEID - startIndexEID);  // got EID
+                        eid = lowercase(eid);
                         Console.WriteLine(eid);
-                        if (!attendanceWriter.getRowOfUserEID(eid).Equals(-1))
+                        if (attendanceWriter.getRowOfUserEID(eid).Equals(-1))
                         {
                             UserNotFound newMember = new UserNotFound(uniqueID, eid);
                             newMember.Show();
@@ -61,7 +66,10 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
+                            attendanceWriter.addUnique(uniqueID, eid);
                             attendanceWriter.markAttendedEID(eid);
+
+                            //check for empty data cells and present new window to fix
                         }
                     }
                     else
@@ -82,6 +90,7 @@ namespace WindowsFormsApplication1
 
         private bool userExists(String utIDNumber)
         {
+            Console.WriteLine(utIDNumber);
             if (attendanceWriter.getRowOfUserUnique(utIDNumber).Equals(-1))
             {
                 return false;
@@ -91,6 +100,29 @@ namespace WindowsFormsApplication1
                 return true;
             }
         }
+
+        private String lowercase(String eid)
+        {
+            String letters = "";
+            String nums = "";
+
+            foreach (var letter in eid)
+            {
+                if (letter >= 'A' && letter <= 'Z')
+                {
+                    letters = letters + letter;
+                } else
+                {
+                    nums = nums + letter;
+                }
+            }
+
+            letters = letters.ToLower();
+            String newEID = letters + nums;
+
+            return newEID;
+        }
+
 
         /*
         private async void markMemberAttended(String utIDNumber)
